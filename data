@@ -1,0 +1,15 @@
+
+mport os
+import pydicom
+import cv2
+import numpy as np
+from matplotlib import pyplot as plt
+#import SimpleITK
+
+filename= r"D:\PycharmProjects\dicom\1411154G\CT1.2.840.113619.2.55.3.604655767.595.1414993370.741.7.dcm"
+ds = pydicom.dcmread(filename)
+print('ds',ds)
+img=ds.pixel_array
+print("img",img)
+plt.imshow(img,cmap='gray')
+plt.show( )
